@@ -39,8 +39,8 @@
   \item{priors}{The prior probability of being in each group}
   \item{S}{Vector of flags of the variables in the rule, including
     \code{start}}
-  \item{ecrit}{Used for diagnostics, see \code{\link{plotdiag}}}
-  \item{pcrit}{Used for diagnostics, see \code{\link{plotdiag}}}
+  \item{ecrit}{X-validated error rate criterion. Used for diagnostics, see \code{\link{plotdiag}}}
+  \item{pcrit}{X-validated likelihood criterion. Used for diagnostics, see \code{\link{plotdiag}}}
 }
 
 \author{Glenn Stone}
@@ -48,7 +48,9 @@
 \examples{
   data(iris)
   Y <- iris[,5]
-  X <- cbind(as.matrix(iris[,1:4]),matrix(rnorm(50*nrow(iris)),nrow=nrow(iris)))
+  noise <- matrix(rnorm(50*nrow(iris)),nrow=nrow(iris))
+  colnames(noise) = paste("noise",1:ncol(noise),sep="")
+  X <- cbind(as.matrix(iris[,1:4]),noise)
   dim(X)
 
   s1 <- sdda(X,Y)
