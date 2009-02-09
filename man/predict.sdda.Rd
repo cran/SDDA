@@ -20,7 +20,7 @@
 }
 
 \value{The predicted class (by default), or the probabilites of being
-from each class} }
+from each class} 
 
 \author{Glenn Stone}
 
