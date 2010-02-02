@@ -102,8 +102,8 @@ extern "C" {
 
     jmax = *jmref;
 
-    Vector estore(estref, max(1,abs(jmax)));
-    Vector pstore(pstref, max(1,abs(jmax)));
+    Vector estore(estref, SDDA_max(1,SDDA_abs(jmax)));
+    Vector pstore(pstref, SDDA_max(1,SDDA_abs(jmax)));
 
 
     if(*iprob==0) prob=false;

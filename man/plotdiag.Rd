@@ -12,10 +12,6 @@
   \item{obj}{Output from \code{sdda} }
 }
 
-\details{}
-
-\value{}
-
 \author{ Glenn Stone }
 \keyword{models}
 \keyword{multivariate}

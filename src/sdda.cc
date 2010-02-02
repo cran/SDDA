@@ -387,7 +387,7 @@ void sdda(const Matrix &X, const IVector &y,
     if(prob) BestAddProb(y,S,T,j,etmp, ptmp);
     else BestAdd(y,S,T,j,etmp);
     jin++;
-    if(jin<=abs(jmax)) {
+    if(jin<=SDDA_abs(jmax)) {
       estore(jin) = etmp;
       pstore(jin) = ptmp;
     }
